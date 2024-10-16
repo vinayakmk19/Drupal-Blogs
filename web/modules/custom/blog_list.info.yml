@@ -1,7 +1,0 @@
-name: 'Blog List'
-type: module
-description: 'A module to display blog posts in a DataTable with sorting, filtering, and pagination.'
-core_version_requirement: ^8 || ^9
-package: Custom
-dependencies:
-  - node
