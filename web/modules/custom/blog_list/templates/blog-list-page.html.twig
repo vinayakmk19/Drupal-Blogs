@@ -1,0 +1,28 @@
+{# Attached the DataTables library to ensure the table is enhanced with DataTable features like pagination, sorting, and filtering #}
+{{ attach_library('blog_list/datatables') }}
+
+{# Render the table element with ID 'b-table' to be targeted by the DataTables JavaScript #}
+<table class="table" id="b-table">
+      {# Table headers to define the columns: Title, Description, Created Date, Active Status, and Edit Link #}
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Created Date</th>
+      <th>Active</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    {# Loop through each blog node passed from the controller as 'nodes' #}
+    {% for node in nodes %}
+      <tr>
+        <td><a href="{{ path('blog_list.detail', {'node_id': node.id}) }}">{{ node.title }}</a></td>
+        <td>{{ node.description|striptags }}</td>
+        <td>{{ node.created_date }}</td>
+        <td>{{ node.active ? 'True' : 'False' }}</td>
+        <td><a href="/node/{{node.id}}/edit" class="button">Edit</a></td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

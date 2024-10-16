@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function blog_list_theme() {
+  return [
+    'blog_list_page' => [
+      'variables' => ['nodes' => []],
+      'template' => 'blog-list-page',
+      'path' => drupal_get_path('module', 'blog_list') . '/templates', // Path to the templates folder
+    ],
+    'blog_detail_page' => [
+      'variables' => ['data' => []],
+      'template' => 'blog-detail-page',
+      'path' => drupal_get_path('module', 'blog_list') . '/templates', // Path to the templates folder
+    ],
+
+  ];
+}

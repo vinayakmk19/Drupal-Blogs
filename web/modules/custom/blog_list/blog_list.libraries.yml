@@ -1,0 +1,10 @@
+datatables:
+  version: 1.x
+  css:
+    theme:
+      https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css: {}
+  js:
+    js/script.js: {}
+    https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js: {}
+  dependencies:
+    - core/jquery

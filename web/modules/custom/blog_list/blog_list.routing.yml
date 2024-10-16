@@ -1,0 +1,15 @@
+blog_list.page:
+  path: '/blog-list'
+  defaults:
+    _controller: 'Drupal\blog_list\Controller\BlogListController::blogPage'
+    _title: 'Blog List'
+  requirements:
+    _permission: 'access content'
+
+blog_list.detail:
+  path: '/blog-list/{node_id}'
+  defaults:
+    _controller: '\Drupal\blog_list\Controller\BlogListController::blogDetail'
+    _title: 'Blog Detail'
+  requirements:
+    _permission: 'access content'

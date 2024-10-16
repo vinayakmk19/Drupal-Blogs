@@ -1,0 +1,11 @@
+{# blog-detail-page.html.twig #}
+
+<h1>{{ data.title }}</h1>
+
+<div class="blog-detail">
+  <p><strong>Description:</strong> {{ data.description|raw }}</p> {# Use |raw to render HTML content #}
+  <p><strong>Created Date:</strong> {{ data.created_date }}</p>
+  <p><strong>Active:</strong> {{ data.active ? 'True' : 'False' }}</p>
+</div>
+
+<a href="{{ path('blog_list.page') }}">Back to Blog List</a>
